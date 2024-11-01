@@ -1,28 +1,14 @@
 package ru.nevrova.calcapp.util;
 
 public class Calculator {
-//    public static int adding ( int x, int y) {
-//        return x + y;
-//    }
-//
-//    public static int subtraction ( int x, int y) {
-//        return x - y;
-//    }
-//
-//    public static int multiplication ( int x, int y) {
-//        return x * y;
-//    }
-    public static <String> int operation(int num1, int num2, String symbol) {
-        int result;
-        switch (symbol) {
-            case "+":  result = num1 + num2;
-                break;
-            case  "-": result = num1 - num2;
-                break;
-            case  "*": result = num1 * num2;
-                break;
-            default:
-                break;
+    public static int operation(int num1, int num2, int operationNumber) {
+        int result = 0;
+        if (operationNumber == 1) {
+            result = num1 + num2;
+        } else if (operationNumber == 2) {
+            result = num1 - num2;
+        } else if (operationNumber == 3) {
+            result = num1 * num2;
         }
         return result;
     }
